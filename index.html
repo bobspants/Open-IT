@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SORRY MA'AM 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:#25003d;
+position:relative;
+}
+
+/* LIQUID BACKGROUND */
+
+.bg{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(90px);
+mix-blend-mode:screen;
+animation:liquid 18s infinite alternate ease-in-out;
+}
+
+.blob1{
+width:600px;
+height:600px;
+background:#8e2de2;
+left:-100px;
+top:-100px;
+}
+
+.blob2{
+width:500px;
+height:500px;
+background:#ff6ec7;
+right:-100px;
+top:10%;
+animation-duration:22s;
+}
+
+.blob3{
+width:700px;
+height:700px;
+background:#5e17eb;
+bottom:-250px;
+left:25%;
+animation-duration:26s;
+}
+
+@keyframes liquid{
+0%{
+transform:translate(0,0) scale(1);
+}
+100%{
+transform:translate(120px,-80px) scale(1.2);
+}
+}
+
+/* FLOWERS */
+
+.flower{
+position:absolute;
+z-index:5;
+animation:bloom 3s ease-in-out infinite;
+filter:drop-shadow(0 0 15px rgba(255,255,255,.25));
+}
+
+.flower:nth-of-type(1){top:4%;left:3%;font-size:90px;}
+.flower:nth-of-type(2){top:15%;left:12%;font-size:50px;}
+.flower:nth-of-type(3){top:6%;right:4%;font-size:95px;}
+.flower:nth-of-type(4){top:20%;right:12%;font-size:55px;}
+.flower:nth-of-type(5){bottom:4%;left:4%;font-size:120px;}
+.flower:nth-of-type(6){bottom:14%;left:18%;font-size:60px;}
+.flower:nth-of-type(7){bottom:4%;right:4%;font-size:120px;}
+.flower:nth-of-type(8){bottom:14%;right:18%;font-size:60px;}
+.flower:nth-of-type(9){left:45%;bottom:4%;font-size:80px;}
+.flower:nth-of-type(10){right:45%;top:4%;font-size:60px;}
+.flower:nth-of-type(11){left:35%;top:12%;font-size:45px;}
+.flower:nth-of-type(12){right:35%;bottom:12%;font-size:45px;}
+
+@keyframes bloom{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.15);
+}
+}
+
+/* CENTER */
+
+.center{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:50;
+}
+
+/* ENVELOPE */
+
+.envelope{
+font-size:160px;
+animation:float 3s infinite ease-in-out;
+cursor:pointer;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-15px);
+}
+}
+
+/* BUTTON */
+
+button{
+margin-top:20px;
+padding:16px 36px;
+border:none;
+border-radius:999px;
+background:white;
+color:#7a00ff;
+font-weight:700;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 30px rgba(255,255,255,.4);
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* MESSAGE */
+
+.message{
+display:none;
+font-size:clamp(45px,8vw,95px);
+font-weight:700;
+letter-spacing:4px;
+color:white;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.9),
+0 0 30px #ff6ec7,
+0 0 60px #8e2de2,
+0 0 120px #8e2de2;
+
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.05);
+}
+}
+
+/* 3D BUBBLES */
+
+.bubble{
+position:absolute;
+border-radius:50%;
+
+background:
+radial-gradient(
+circle at 30% 30%,
+rgba(255,255,255,.95),
+rgba(255,255,255,.45) 15%,
+rgba(255,255,255,.15) 35%,
+rgba(255,255,255,.05) 65%,
+transparent 100%
+);
+
+border:1px solid rgba(255,255,255,.35);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+inset -20px -20px 40px rgba(255,255,255,.08),
+inset 15px 15px 25px rgba(255,255,255,.35),
+0 10px 40px rgba(255,255,255,.08),
+0 0 30px rgba(255,255,255,.05);
+
+pointer-events:none;
+}
+
+.bubble::before{
+content:'';
+position:absolute;
+width:35%;
+height:35%;
+top:12%;
+left:15%;
+border-radius:50%;
+background:
+radial-gradient(circle,
+rgba(255,255,255,.95),
+rgba(255,255,255,.2));
+}
+
+@media(max-width:768px){
+
+.envelope{
+font-size:110px;
+}
+
+button{
+font-size:15px;
+padding:14px 28px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg">
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+</div>
+
+<div class="flower">🌻</div>
+<div class="flower">🌹</div>
+<div class="flower">🌻</div>
+<div class="flower">🌹</div>
+<div class="flower">🌻</div>
+<div class="flower">🌹</div>
+<div class="flower">🌻</div>
+<div class="flower">🌹</div>
+<div class="flower">🌼</div>
+<div class="flower">🌸</div>
+<div class="flower">🌹</div>
+<div class="flower">🌸</div>
+
+<div id="bubbles"></div>
+
+<div class="center">
+
+<div id="envelopeContainer">
+<div class="envelope">📩</div>
+
+<button onclick="openLetter()">
+💌 CLICK TO OPEN
+</button>
+</div>
+
+<div class="message" id="message">
+SORRY MA'AM
+</div>
+
+</div>
+
+<script>
+
+const bubbleContainer=document.getElementById('bubbles');
+
+for(let i=0;i<18;i++){
+
+const bubble=document.createElement('div');
+
+const size=Math.random()*140+100;
+
+bubble.classList.add('bubble');
+
+bubble.style.width=size+'px';
+bubble.style.height=size+'px';
+
+bubble.x=Math.random()*window.innerWidth;
+bubble.y=Math.random()*window.innerHeight;
+
+bubble.vx=(Math.random()-0.5)*0.8;
+bubble.vy=(Math.random()-0.5)*0.8;
+
+bubble.style.left=bubble.x+'px';
+bubble.style.top=bubble.y+'px';
+
+bubbleContainer.appendChild(bubble);
+}
+
+const bubbles=document.querySelectorAll('.bubble');
+
+let mouseX=-9999;
+let mouseY=-9999;
+
+document.addEventListener('mousemove',(e)=>{
+mouseX=e.clientX;
+mouseY=e.clientY;
+});
+
+document.addEventListener('touchmove',(e)=>{
+mouseX=e.touches[0].clientX;
+mouseY=e.touches[0].clientY;
+},{passive:true});
+
+function animateBubbles(){
+
+bubbles.forEach((bubble)=>{
+
+let x=parseFloat(bubble.style.left);
+let y=parseFloat(bubble.style.top);
+
+let dx=x-mouseX;
+let dy=y-mouseY;
+
+let distance=Math.sqrt(dx*dx+dy*dy);
+
+if(distance<220){
+
+x+=(dx/distance)*6;
+y+=(dy/distance)*6;
+
+}else{
+
+x+=bubble.vx;
+y+=bubble.vy;
+
+}
+
+if(x<0)x=window.innerWidth;
+if(x>window.innerWidth)x=0;
+
+if(y<0)y=window.innerHeight;
+if(y>window.innerHeight)y=0;
+
+bubble.style.left=x+'px';
+bubble.style.top=y+'px';
+
+});
+
+requestAnimationFrame(animateBubbles);
+
+}
+
+animateBubbles();
+
+function openLetter(){
+
+document.getElementById('envelopeContainer').style.display='none';
+
+setTimeout(()=>{
+
+document.getElementById('message').style.display='block';
+
+},500);
+
+}
+
+</script>
+
+</body>
+</html>
